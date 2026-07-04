@@ -12,7 +12,7 @@
 ## 檔案結構
 
 ```text
-plugin-example/
+./
 ├── dist/index.js      # 可被主程式直接載入的 ESM 插件
 ├── src/index.ts       # TypeScript 撰寫版本，示範如何使用核心型別
 ├── package.json       # 範例插件套件資訊
@@ -24,7 +24,7 @@ plugin-example/
 
 管理員登入 Web Console 後進入「插件管理」，可以用兩種方式安裝：
 
-1. 匯入本機檔案：選擇 `plugin-example/dist/index.js`，按「安裝檔案」。
+1. 匯入本機檔案：選擇 `dist/index.js`，按「安裝檔案」。
 2. 從 GitHub 安裝：貼上 GitHub repo、tree、blob 或 raw 連結。若貼 repo/tree 連結，系統會讀取 `plugin.json` 的 `main` 欄位取得入口檔。
 
 Web 安裝會把插件保存到 Node.js 的 `data/plugins/`，並寫入 manifest；後續重啟會自動載入，不需要再手動改 `.env`。
